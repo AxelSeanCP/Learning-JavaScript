@@ -11,6 +11,32 @@
             height: 300px;
             object-fit: contain;
         }
+        #container{
+            width: 400px;
+            height: 400px;
+            background-color: yellow;
+            position: relative;
+        }
+        #animate{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: red;
+        }
+
+        .go{
+            color: green;
+        }
+        .stop{
+            color: red;
+        }
+        .mouse-over{
+            background-color: #d94a38;
+            width: 120px;
+            height: 20px;
+            padding: 40px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -26,8 +52,31 @@
 
     <img src="img/silperwolp.jpg" class="silverwolf">
 
-    <button id="ganti-gambar">Ganti Gambar</button>
+    <button id="ganti-gambar">Ganti Gambar</button> <br>
 
+    <input id="numb">
+    <button type="button" onclick="myFunction()">Submit</button>
+    <p id="output"></p>
+
+    <h1>My First JavaScript Animation</h1>
+    <p><button onclick="myMove()">Move</button></p>
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+
+    <div id="myBox">
+        <h2>Hello World!</h2>
+    </div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <div class="mouse-over" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+        Mouse Over Me
+    </div>
+
+    <div class="mouse-over" onmousedown="mouseDown(this)" onmouseup="mouseUp(this)">
+        Click Me!
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
