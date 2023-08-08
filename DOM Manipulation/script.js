@@ -27,12 +27,12 @@ document.getElementById("btn").addEventListener("click", () => {
 
 //ganti gambar
 let ctr = 1;
-document.getElementById("ganti-gambar").addEventListener("click", () => {
-    const gambar = document.getElementsByClassName("silverwolf");
+document.getElementsByClassName("gbr")[0].addEventListener("click", () => {
+    const gambar = document.getElementsByClassName("gbr");
     if (ctr%2===1) { //kalo ganjil meltryllis
         gambar[0].src = "img/meltryllis.jpg";
     }else { // kalo genap silverwolf
-        gambar[0].src = "img/silperwolp.jpg";
+        gambar[0].src = "img/silverwolf.jpg";
     }
     ctr++
 });
@@ -115,3 +115,51 @@ function mouseUp(obj){
     obj.innerHTML = "Thank You";
     obj.style.backgroundColor = "#d94a38";
 }
+
+//kalo butuh passing parameter
+//element.addEventListener("click", function(){ myFunction(p1, p2); }); 
+
+//kalo butuh remove event listener
+//element.removeEventListener("mousemove", myFunction);
+
+//event bubling = elemen paling dalam jalan dulu baru luar
+//event capturing = elemen paling luar jalan dulu baru dalam
+//contoh : <div><p></p></div>
+
+//cara lain ambil value pake nodes
+//document.getElementById("demo").innerHTML = document.getElementById("judul").firstChild.nodeValue;
+//document.getElementById("demo").innerHTML = document.getElementById("judul").childNodes[0].nodeValue;
+
+/*
+//tambah elemen
+const para = document.createElement("p");
+const node = document.createTextNode("this is new!");
+para.appendChild(node);
+
+//ditambah di belakang
+const element = document.getElementById("main");
+element.appendChild(para);
+
+//ditambah di paling depan
+const child = document.getElementById("p1");
+element.insertBefore(para, child);
+*/
+
+/*
+//remove elemen
+//document.getElementById("p1").remove();
+const parent = document.getElementById("main");
+const child = document.getElementById("p1");
+parent.removeChild(child);
+*/
+
+/*
+//replace elemen
+const para = document.createElement("p");
+const node = document.createTextNode("this is new!");
+para.appendChild(node);
+
+const parent = document.getElementById("main");
+const child = document.getElementById("p1");
+parent.replaceChild(para, child);
+*/
