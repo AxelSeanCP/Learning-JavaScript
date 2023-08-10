@@ -163,3 +163,35 @@ const parent = document.getElementById("main");
 const child = document.getElementById("p1");
 parent.replaceChild(para, child);
 */
+
+/*
+//collection
+const myCollection = document.getElementsByTagName("p");
+for (let i = 0; i< myCollection.length; i++) {
+   myCollection[i].style.color = "red";
+}
+const myNodeList = document.querrySelectorAll("p");
+for (let i = 0; i< myNodeList.length; i++) {
+   myNodeList[i].style.color = "red";
+}
+//the difference : 
+/*
+An HTMLCollection is a collection of document elements.
+
+A NodeList is a collection of document nodes (element nodes, attribute nodes, and text nodes).
+
+HTMLCollection items can be accessed by their name, id, or index number.
+
+NodeList items can only be accessed by their index number.
+
+An HTMLCollection is always a live collection. Example: If you add a <li> element to a list in the DOM, the list in the HTMLCollection will also change.
+
+A NodeList is most often a static collection. Example: If you add a <li> element to a list in the DOM, the list in NodeList will not change.
+
+The getElementsByClassName() and getElementsByTagName() methods return a live HTMLCollection.
+
+The querySelectorAll() method returns a static NodeList.
+
+The childNodes property returns a live NodeList.
+
+*/
