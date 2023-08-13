@@ -4,6 +4,7 @@
 document.getElementById(id) --> ambil dari id
 document.getElementsByTagName(name) --> ambil dari name
 document.getElementsByClassName(name) --> ambil dari class
+document.querrySelectorAll("p.name") --> ambil semua dari p yang sama
 selengkapnya ada di w3schools
 */
 /*
