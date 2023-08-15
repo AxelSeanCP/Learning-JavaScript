@@ -87,6 +87,28 @@ input[type="checkbox"]{
     margin-right: 1em;
 }
 
-.delete{
+.check:checked + span{ /*kalo checkbox di klik tulisan kecoret*/
+    text-decoration: line-through;
+}
+
+.delete-btn{
+    background-color: #17171f;
+    color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.edit-btn{
     margin-left: auto;
+    background-color: #17171f;
+    color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#addButton:hover, .edit-btn:hover, .delete-btn:hover{
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
 }
