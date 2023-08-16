@@ -8,20 +8,31 @@
     <title>To Do List App</title>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1>To Do List</h1>
-            <p>Add Tasks and Complete Them!!!</p>
-        </header>
-        <div class="sub-container">
-            <div class="input-container">
-                <input type="text" id="taskInput" placeholder="Add new task!">
-                <button id="addButton">Add</button>
+    <div class="bg-image"></div>
+    <div class="outer-container">
+        <div class="container">
+            <header class="header">
+                <h1>To Do List</h1>
+                <p>
+                    Add Tasks and Complete Them!!! <br>
+                    Change themes to fit your style
+                </p>
+            </header>
+            <div class="sub-container">
+                <div class="themes-container">
+                    <button class="themes-btn" onclick="changeThemes('bmw')"><img src="../../icon/bmw-icon.png"></button>
+                    <button class="themes-btn" onclick="changeThemes('audi')"><img src="../../icon/audi-icon.png"></button>
+                    <button class="themes-btn" onclick="changeThemes('mitsubishi')"><img src="../../icon/mitsubishi-icon.png"></button>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="taskInput" placeholder="Add new task!">
+                    <button id="addButton">Add</button>
+                </div>
+                <ul id="taskList"></ul>
             </div>
-            <ul id="taskList"></ul>
         </div>
     </div>
-
+        
     <script src="toDoList.js"></script>
 </body>
 </html>
