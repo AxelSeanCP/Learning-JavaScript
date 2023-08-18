@@ -44,17 +44,26 @@ function addTask() {
 
         //check themes yang jalan sekarang & ganti warna menyesuaikan
         if (themesName === "audi") {
+            console.log("audi aman");
             textSpan.style.color = "#f5f0f0";
             editBtn.style.color = "#f5f0f0";
             deleteBtn.style.color = "#f5f0f0";
+            editBtn.style.backgroundColor = "#17171f";
+            deleteBtn.style.backgroundColor = "#17171f";
         }else if(themesName === "bmw"){
+            console.log("bmw aman");
             textSpan.style.color = "#1338b3";
-            editBtn.style.color = "#17171f";
-            deleteBtn.style.color = "#17171f";
+            editBtn.style.color = "#f5f0f0";
+            deleteBtn.style.color = "#f5f0f0";
+            editBtn.style.backgroundColor = "#1338b3";
+            deleteBtn.style.backgroundColor = "#1338b3";
         }else if(themesName === "mitsubishi"){
-            textSpan.style.color = "#f5f0f0";
+            console.log("mitsubishi aman");
+            textSpan.style.color = "#17171f";
             editBtn.style.color = "#17171f";
             deleteBtn.style.color = "#17171f";
+            editBtn.style.backgroundColor = "#f5f0f0";
+            deleteBtn.style.backgroundColor = "#f5f0f0";
         }
         
         taskItem.appendChild(textSpan);
@@ -95,6 +104,7 @@ function changeThemes(merk){
                 item.style.color = "#1338b3";
             });
         }
+        themesName = "bmw";
     }
 
     if (merk === 'audi') {
@@ -115,6 +125,7 @@ function changeThemes(merk){
                 item.style.color = "#f5f0f0";
             });
         }
+        themesName = "audi";
     }
 
     if (merk === 'mitsubishi') {
@@ -135,9 +146,9 @@ function changeThemes(merk){
                 item.style.color = "#17171f";
             });
         }
+        themesName = "mitsubishi";
     }
     
-    console.log("ketrigger");
     wallpaper.style.backgroundImage = `url(${imageUrl})`;
 
 }
