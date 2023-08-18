@@ -1,0 +1,15 @@
+body{
+    font-family: monospace;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ede90c;
+}
+
+.game-container{
+    width: 50vw;
+    margin: 0 auto;
+    background-color: #f5f0f0;
+}
