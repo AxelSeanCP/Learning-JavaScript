@@ -1,10 +1,11 @@
 const gameBox = document.querySelector(".game-box");
-let isi = ["A","A","B","B","C","C","D","D","E","E","F","F","G","G","H","H"];
+let isi = ["😊","😊","😂","😂","😍","😍","😁","😁","😜","😜","😎","😎","😢","😢","😉","😉"];
 let opened = [];
+let ctr = 0;
 
 let isiShuffle = isi.sort(() => Math.random() - 0.5);
 
-for (let i = 0; i < isi.length; i++) { //mbikin kotak
+for (let i = 0; i < isi.length; i++) {
     const kotak = document.createElement("div");
     kotak.innerHTML = isi[i];
     kotak.className = "kotak";
@@ -26,6 +27,7 @@ for (let i = 0; i < isi.length; i++) { //mbikin kotak
                 opened = [];
             }, 1000);
         }else {
+            console.log("correct");
             opened = [];
             cekMenang();
         }
@@ -65,7 +67,7 @@ function cekMenang() {
     modal.style.display = "block";
     
     closeBtn.onclick = function(){
-        modal.style.display = "none"
+        modal.style.display = "none";
     };
     clearInterval(interval);
 }

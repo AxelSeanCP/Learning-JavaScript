@@ -86,6 +86,11 @@ h2{
     transition: 0.25s;
     transform: rotateY(0deg);
     backface-visibility: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.kotak:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 18px;
 }
 
 .boxOpen::after{
