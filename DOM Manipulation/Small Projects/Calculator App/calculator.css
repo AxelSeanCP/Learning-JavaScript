@@ -1,0 +1,43 @@
+*{
+    font-family: monospace;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    min-height: 100vh;
+    text-align: center;
+}
+
+.main-screen{
+    height: 50vh;
+    background-color: #3b3d45;
+    position: relative;
+}
+
+#hasil{
+    color: #f5f0f0;
+    font-size: 4.4em;
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+}
+
+.num-pad{
+    height: 50vh;
+    background-color: #3b3d45;
+    border-top: 5px solid #868b9e;
+    padding-top: 8px;
+}
+
+button{
+    width: 23vw;
+    height: 9.5vh;
+    font-size: 1.6em;
+    margin: 0;
+    background-color: #3b3d45;
+    border: none;
+    cursor: pointer;
+    color: #f5f0f0;
+}
