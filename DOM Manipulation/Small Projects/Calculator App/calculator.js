@@ -13,7 +13,9 @@ for (let i = 0; i < listButton.length; i++) {
                         hasil.innerText = "0";
                         break;
                     case "⌫":
-                        hasil.innerText = hasil.innerText.slice(0, -1);
+                        if (hasil.innerText.length !== 1) {
+                            hasil.innerText = hasil.innerText.slice(0, -1);
+                        }else hasil.innerText = "0";
                         break;
                     case "=":
                         hasil.innerText = eval(hasil.innerText);
@@ -27,7 +29,9 @@ for (let i = 0; i < listButton.length; i++) {
                         hasil.innerText = angka;
                         break;
                     default:
-                        hasil.innerText += listButton[i].innerText;
+                        if (!isNaN(hasil.innerText.charAt(hasil.innerText.length-1))) { //cek kalau yang terakhir angka, nanti baru bisa ditambah operator
+                            hasil.innerText += listButton[i].innerText;
+                        }
                         break;
                 }
             }else { //yang dipencet angka

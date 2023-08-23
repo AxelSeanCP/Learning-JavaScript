@@ -12,7 +12,7 @@
 
 .main-screen{
     height: 50vh;
-    background-color: #3b3d45;
+    background-color: #17171f;
     position: relative;
 }
 
@@ -26,8 +26,8 @@
 
 .num-pad{
     height: 50vh;
-    background-color: #3b3d45;
-    border-top: 5px solid #868b9e;
+    background-color: #17171f;
+    border-top: 5px solid #1bbbe3;
     padding-top: 8px;
 }
 
@@ -36,8 +36,12 @@ button{
     height: 9.5vh;
     font-size: 1.6em;
     margin: 0;
-    background-color: #3b3d45;
+    background-color: #17171f;
     border: none;
     cursor: pointer;
     color: #f5f0f0;
+}
+
+.operator {
+    color: #1bbbe3;
 }
