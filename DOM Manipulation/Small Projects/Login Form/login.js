@@ -5,7 +5,9 @@ const password = document.getElementById("password");
 form.addEventListener("submit", e => {
     e.preventDefault();
 
-    validateInputs();
+    if (validateInputs()) {  //kalau sudah benar semua bisa submit, kalau salah ulangi
+        form.submit();
+    }
 });
 
 const setError = (element, message) => {
@@ -26,20 +28,37 @@ const setSuccess = element => {
     element.style.border = "1px #09c372 solid";
 };
 
+const cekUsername = value => {
+    if (value === "") {
+        setError(username, "Username is required");
+        return false;
+    }
+
+    setSuccess(username);
+    return true;
+};
+
+const cekPassword = value => {
+    if (value === "") {
+        setError(password, "Password is required");
+        return false;
+    }
+
+    setSuccess(password);
+    return true;
+};
+
 const validateInputs = () => {
     const usernameValue = username.value.trim();
     const passwordValue = username.value.trim();
 
-    if (usernameValue === "") {
-        setError(username, "Username is required");
-    }else {
-        setSuccess(username);
+    const isUsernameValid = cekUsername(usernameValue);
+    const isPasswordValid = cekPassword(passwordValue);
+
+    //kalau salah langsung return, kalau benar mbalik ke eventlistener
+    if (isUsernameValid && isPasswordValid){
+        return true;
     }
 
-    if (passwordValue === "") {
-        setError(password, "Password is required");
-    } else {
-        setSuccess(password);
-    }
-
+    return false;
 }

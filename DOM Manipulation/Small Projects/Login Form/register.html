@@ -2,17 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
     <link rel="stylesheet" href="login.css">
-    <title>Login Form</title>
 </head>
 <body>
-    
+
     <div class="container">
-        <form id="form" class="login-container" action="finished.html">
+        <form id="form" class="login-container" action="login.html">
             <header>
-                <h1>Login</h1>
+                <h1>Register</h1>
             </header>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" class="input" name="email" placeholder="Type your email">
+                <div class="error"></div>
+            </div>
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" class="input" name="username" placeholder="Type your username">
@@ -22,25 +28,24 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" class="input" name="password" placeholder="Type your password">
                 <div class="error"></div>
-                <a href="#" class="forgot-pw">Forgot password?</a>
             </div>
             <div class="form-group">
-                <button type="submit" id="login">Login</button>
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirmPassword" class="input" name="confirm-password" placeholder="Retype your password">
+                <div class="error"></div>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="login">Register</button>
             </div>
             <div class="form-group text-center">
-                <p>Or Sign Up Using</p>
+                <p>Or Register Using</p>
                 <button class="social-button"><img src="../../icon/facebook-icon.png" alt=""></button>
                 <button class="social-button"><img src="../../icon/instagram-icon.png" alt=""></button>
                 <button class="social-button"><img src="../../icon/google-icon.png" alt=""></button>
             </div>
-            <div class="m-100"></div>
-            <div class="form-group text-center">
-                <p>Or Sign Up Using</p>
-                <a href="register.html"><p class="sign-up">Sign up</p></a>
-            </div>
         </form>
     </div>
 
-    <script defer src="login.js"></script>
+    <script defer src="register.js"></script>
 </body>
 </html>

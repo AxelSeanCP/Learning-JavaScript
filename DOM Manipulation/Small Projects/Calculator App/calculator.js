@@ -22,10 +22,6 @@ for (let i = 0; i < listButton.length; i++) {
                         break;
                     case "%":
                         let angka = ambilAngka();
-                        // let awal = angka;
-                        // awal /= 100;
-                        
-                        // hasil.innerText += angka;
                         hasil.innerText = angka;
                         break;
                     default:
