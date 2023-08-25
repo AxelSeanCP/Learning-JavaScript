@@ -32,20 +32,12 @@ header{
 }
 
 .form-group{
-    margin-top: 1rem;
-}
-
-.form-group.success input{
-    border-color: #09c372;
-}
-
-.form-group.error input{
-    border-color: #ff3860;
+    margin-bottom: 0.4rem;
 }
 
 .form-group .error{
     color: #ff3860;
-    font-size: 9px;
+    font-size: 13px;
     height: 13px;
 }
 
@@ -59,11 +51,11 @@ label{
     font-size: 1.5em;
 }
 
-input{
+.input{
     width: 100%;
     height: 40px;
     font-size: 1.2em;
-    margin-bottom: 10px;
+    margin: 10px 0px 0px 0px;
     background-color: #f5f0f0;
     border: none;
     border-bottom: 1px #484a49 solid;
@@ -71,7 +63,7 @@ input{
     transition: border-color 0.3s;
 }
 
-input:focus {
+.input:focus {
     border: 1px solid #484a49;
     outline: none;
     transition: border-color 0.3s;

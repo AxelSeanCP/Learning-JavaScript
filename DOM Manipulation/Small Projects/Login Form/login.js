@@ -13,9 +13,8 @@ const setError = (element, message) => {
     const errorDisplay = formGroup.querySelector(".error");
 
     errorDisplay.innerText = message;
-    formGroup.classList.add("error");
-    formGroup.classList.remove("success");
-    console.log(errorDisplay.classList);
+
+    element.style.border = "1px #ff3860 solid";
 };
 
 const setSuccess = element => {
@@ -23,9 +22,8 @@ const setSuccess = element => {
     const errorDisplay = formGroup.querySelector(".error");
 
     errorDisplay.innerText = "";
-    errorDisplay.classList.add("success");
-    errorDisplay.classList.remove("error");
-    console.log(errorDisplay.classList);
+    
+    element.style.border = "1px #09c372 solid";
 };
 
 const validateInputs = () => {
@@ -36,6 +34,12 @@ const validateInputs = () => {
         setError(username, "Username is required");
     }else {
         setSuccess(username);
+    }
+
+    if (passwordValue === "") {
+        setError(password, "Password is required");
+    } else {
+        setSuccess(password);
     }
 
 }
