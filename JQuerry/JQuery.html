@@ -6,17 +6,54 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="JQuery.js"></script> <!--masuk ke file external-->
     <title>Document</title>
+    <style>
+        #panel, #flip {
+            padding: 5px;
+            font-size: 18px;
+            text-align: center;
+            background-color: #555;
+            color: white;
+            border: solid 1px #666;
+            border-radius: 3px;
+        }
+
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <h1>This is heading</h1>
     <p id="p1">This is paragraph</p>
     <p id="p2">this is also paragraph</p>
-    <button>click me</button>
+    <button id="btn1">click me</button>
     <button id="btn2">dont click me</button>
 
     <button id="animate">Start Animation</button>
-    <div class="div-animate" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
-    <br />
+    <!-- <div class="div-animate" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div> -->
+
+    <button id="stop">Stop Sliding</button>
+    <div id="flip">Click to slide down panel</div>
+    <div id="panel">Hello World!</div>
+
+    <button id="btn5">Hide</button>
+    <p id="p3">this will be hidden</p>
+
+    <p id="p4">test chaining method</p>
+
+    <p id="test">This is some <b>BOLD</b> text in a paragraph</p>
+    <input type="text" id="testInput">
+    <!--
+    <button id="btn6">show/set text</button>
+    <button id="btn7">show/set HTML</button>
+    <button id="btn8">show/set value</button>
+    <button id="btn9">show/set button id</button> -->
+    <button id="btn10">show old/new text</button>
+    <button id="btn11">show old/new html</button>
+
+    <p><a href="https://youtu.be/k2CAapOoNOE?si=W0N1eWBtEn6Ced1m" title="Meltryllis Trailer" id="link1">Meltryllis best girl</a></p>
+    <button id="btn12">change link</button>
     
 </body>
 </html>
