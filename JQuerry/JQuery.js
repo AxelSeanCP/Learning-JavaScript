@@ -78,4 +78,94 @@ $(document).ready(function(){ //mencegah supaya jquery gak jalan sebelum dom sel
         //div.animate({fontSize: '3em'}, "slow");
     });
 
+    /*jquery stop
+    $(selector).stop(stopAll,goToEnd);
+    //stopAll default false, true -> animasi yang aktif sekarang berhenti tapi selanjutnya jalan, false -> berhenti semua
+    //goToEnd (optional) default false -> menentukan apakah diselesaikan langsung animasi yang sedang jalan
+    */ 
+    $("#stop").click(function(){
+        $("#panel").stop();
+    });
+    $("#flip").click(function(){
+        $("#panel").slideDown(5000);
+    });
+
+    /*jquery callback function
+    $(selector).hide(speed,callback);
+    //callback function hanya jalan ketika animasi/function-nya sudah selesai, contoh :
+    //alert muncul sebelum selesai hide
+    $("#btn5").click(function(){
+        $("#p3").hide("slow");
+        alert("The paragraph is now hidden");
+    });
+    //baru alert setelah paragraph di hide
+    $("#btn5").click(function(){
+        $("#p3").hide("slow", function(){
+            alert("The paragraph is now hidden");
+        });
+    });
+    */
+
+    /*jquery chaining*/
+    //$("#p4").css("color", "magenta").slideUp(2000).slideDown(2000);
+    $("#p4").css("color", "magenta")
+    .slideUp(2000)
+    .slideDown(2000);
+
+    /*jquery DOM
+    .text() - set / return text content element
+    .html() - set / return html element
+    .val() - set / return value element*/
+
+    //get
+    /*
+    $("#btn6").click(function(){
+        alert("Text : "+ $("#test").text());
+    });
+    $("#btn7").click(function(){
+        alert("Html : "+ $("#test").html());
+    });
+    $("#btn8").click(function(){
+        alert("Val : "+ $("#testInput").val());
+    });
+    */
+
+    //get attribute
+    $("#btn9").click(function(){
+        alert($("#btn9").attr("id"));
+    })
+
+    //set
+    /*
+    $("#btn6").click(function(){
+        $("#test").text("Hello World!");
+    });
+    $("#btn7").click(function(){
+        $("#test").html("<b>Hello World!</b>");
+    });
+    $("#btn8").click(function(){
+        $("#testInput").val("Johnny Joestar");
+    });
+    */
+    
+    //set + callback function
+    $("#btn10").click(function(){
+        $("#test").text(function(i, origText){
+            return "Old text: " + origText + " New Text: Hello World (index: " + i + ")";
+        });
+    });
+    $("#btn11").click(function(){
+        $("#test").html(function(i, origText){
+            return "Old Html: " + origText + " New Html: <b>Hello World</b> (index: "+ i + ")";
+        });
+    });
+
+    //set attr
+    $("#btn12").click(function(){
+        $("#link1").attr({
+            "href" : "https://youtu.be/xf3NBEqkhDo?si=bNAK8Te-zMKXwxCt",
+            "title" : "Meltryllis Voice Lines" 
+        });
+    });
+
  });
