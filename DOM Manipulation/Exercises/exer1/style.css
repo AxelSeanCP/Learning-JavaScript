@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    text-align: center;
+}
+
+header{
+    width: 100%;
+}
+
+.kiri{
+    width: 40%;
+    text-align: left;
+    float: left;
+}
+
+.kanan{
+    width: 40%;
+    display: inline;
+}
+
+.form-group{
+    width: 100%;
+}
+
+.form-group textarea{
+    display: block;
+}
+
+.table-box{
+    display: grid;
+    width: 300px;
+    height: 300px;
+}
+
+.kotak{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    font-size: 24px;
+}
+
+.merah{
+    background-color: red;
+}
+
+#startBtn{
+    background-color: green;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 puzzle gampang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <h1>8 Puzzle Gampang</h1>
+        </header>
+        <div class="kiri">
+            <div class="form-group">
+                <label>Ukuran board   <input type="text" id="ukuran"> <button id="startBtn">start</button></label>
+            </div>
+            <div class="form-group">
+                <label>Kecepatan 
+                    <select name="kecepatan" id="kecepatan">
+                        <option value="lambat">Lambat</option>
+                        <option value="normal">Normal</option>
+                        <option value="cepat">Cepat</option>
+                    </select>
+                </label>
+            </div>
+            <div class="form-group">
+                <textarea name="command" id="commandInput" cols="40" rows="10"></textarea>
+                <button id="runBtn">Run</button>
+                <button id="clearBtn">Clear</button>
+                <button id="cheatBtn">Cheat</button>
+            </div>
+        </div>
+        <div class="kanan">
+            <div class="table-box">
+            </div>
+        </div>
+    </div>
+
+    <script defer src="script.js"></script>
+</body>
+</html>
