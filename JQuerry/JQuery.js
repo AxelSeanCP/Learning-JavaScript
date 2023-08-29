@@ -6,19 +6,19 @@ $(document).ready(function(){ //mencegah supaya jquery gak jalan sebelum dom sel
     $("button").click(function(){
         $("p").hide();
     });
-    */
-
+    
     $("#p1").mouseenter(function(){
         $(this).css("color", "red"); //change css
     });
-
+    
     $("#p2").hover(function(){
         $(this).css("color", "blue");
     },
     function(){
         $(this).css("color", "black");
     });
-
+    
+    */
     /*
     $("#btn2").on("click", function(){
         $(this).hide();
@@ -167,5 +167,72 @@ $(document).ready(function(){ //mencegah supaya jquery gak jalan sebelum dom sel
             "title" : "Meltryllis Voice Lines" 
         });
     });
+
+    //set attr + callback function mirip sama text & html, selengkapnya di w3school
+
+    /*jquery add content
+    .append() insert content di akhir
+    .prepend() insert content di awal
+    .after() insert content setelah elemen yang dipilih
+    .before() insert content sebelum elemen yang dipilih
+    $("p").append("Some appended text");
+    var txt = $("<p></p>").text("Text."); //create new element*/
+
+    /*jquery remove content
+    .remove() remove elemen yang dipilih dan childnya
+    .empty() remove child elemen yang dipilih
+    $("p").remove(".test, .demo") remove p yang classnya test dan demo */
+
+    /*jquery CSS Classes
+    .addClass() nambah 1/lebih class ke elemen
+    .removeClass() remove 1/lebih class ke elemen
+    .toggleClass() nambah/remove class di elemen yg dipilih
+    .css() set / return attribute style 
+    
+    $("#btn1").click(function(){
+        $("#p1").addClass("important blue");
+    });
+    
+    */
+    $("#btn1").click(function(){
+        $("#p1").toggleClass("important blue");
+    });
+
+    /*jquery css()
+    .css("property","value");
+    $("p").css({"background-color": "yellow", "font-size": "20%"}); */
+
+    /*jquery dimensions
+    .width()
+    .height()
+    .innerWidth()
+    .innerHeight()
+    .outerWidth()
+    .outerHeight()
+     */
+
+    /*jquery traversing dom tree
+    //up
+    .parent() return parent element
+    .parents() return all parent element
+    .parentsUntil()
+    //down
+    .children() return direct children single level
+    .find("*" / "span") return all descendant or all span that are the descendant
+    //sideways
+    .siblings()
+    .next()
+    .nextAll()
+    .nextUntil()
+    .prev()
+    .prevAll()
+    .prevUntil()
+    //filtering
+    .first() //return the first element
+    .last()
+    .eq() //return with the specified index number
+    .filter() //return only specified
+    .not() //reverse filter
+     */
 
  });
