@@ -29,6 +29,10 @@ runBtn.addEventListener("click", () => {
     const ukuranValue = parseInt(ukuran.value.substring(0,1));
 
     let index = Array.prototype.indexOf.call(box.children, merah); //buat cari index kotak merah
+    const diTembokAtas = index < ukuranValue;
+    const diTembokKanan = index % ukuranValue === ukuranValue-1;
+    const diTembokKiri = index % ukuranValue === 0;
+    const diTembokBawah = index >= ukuranValue*2;
 
     if(command === "w"){
         index-=ukuranValue;
