@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //classes
+        class Car {
+            constructor(name){ //constructor jalan otomatis ketika objek dibuat
+                this.brand = name;
+            }
+
+            present() { //method milik objek
+                return "i have a " + this.brand;
+            }
+        }/*
+        const myCar = new Car("Ford");
+        myCar.present();
+        document.write(myCar.present());*/
+
+        class Model extends Car{ //inheritance => dapat semua method dari class parent
+            constructor(name, mod) {
+                super(name); //panggil constructor parent
+                this.model = mod;
+            }
+
+            show(){
+                return this.present() + ", it is a " + this.model;
+            }
+        }
+        const myCar = new Model("Ford", "Mustang");
+        document.write(myCar.show());
+    </script>
+</body>
+</html>
