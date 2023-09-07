@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h1 id="demo"></h1>
     <script>
         //classes
         class Car {
@@ -33,6 +34,64 @@
         }
         const myCar = new Model("Ford", "Mustang");
         document.write(myCar.show());
+
+        //arrow function
+        const hello = (param) => {"Hello World!"};
+
+        //array.map
+        const myArray = ['apple', 'orange', 'banana'];
+
+        const myList = myArray.map(item => <li>{item}</li>);
+
+        //destructuring
+        const vehicles = ['mustang', 'f-150', 'expedition'];
+
+        const [car, truck, suv] = vehicles; //masing masing dimasukkan ke variable (urutan penting)
+
+        /*
+        const vehicleOne = {
+            brand: 'Ford',
+            model: 'Mustang',
+            type: 'car',
+            year: 2021, 
+            color: 'red'
+        }
+
+        myVehicle(vehicleOne);
+
+        function myVehicle({type, color, brand, model}) {
+            const message = 'My ' + type + ' is a ' + color + ' ' + brand + ' ' + model + '.';
+        }
+        */
+
+        //spread operator
+        const numbers = [1,2,3,4,5,6];
+
+        const [one, two, ...rest] = numbers; // one = 1 two = 2 rest = 3,4,5,6
+        
+        const myVehicle = {
+            brand: 'Ford',
+            model: 'Mustang',
+            color: 'red'
+        }
+
+        const updateMyVehicle = {
+            type: 'car',
+            year: 2021, 
+            color: 'yellow'
+        }
+
+        const myUpdatedVehicle = {...myVehicle, ...updateMyVehicle}; //combine 2 object, yang sama di overwrite
+
+        //ternary operator
+        let authenticated = true;
+        function renderApp() {
+            document.getElementById("demo").innerHTML = "Welcome!";
+        }
+        function renderLogin() {
+            document.getElementById("demo").innerHTML =  "Please log in";
+        }
+        authenticated ? renderApp() : renderLogin();
     </script>
 </body>
 </html>
