@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { useState } from 'react'; //penting buat hook
+
 /*
 const myArray = ['apple', 'orange', 'banana'];
 
@@ -35,7 +37,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);
 */
 
-//class component
+//------------------------------class component
 /*
 class Car extends React.Component {
     render(){
@@ -43,7 +45,7 @@ class Car extends React.Component {
     }
 }*/
 
-//function component
+//------------------------------function component
 /*
 function Car(){
     return <h2>Hi, Im a Car!</h2>
@@ -61,7 +63,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Car color="red" />);
 */
 
-//component in component
+//------------------------------component in component
 /*
 function Car(){
     return <h2>Hi, Im a Car!</h2>
@@ -80,7 +82,7 @@ function Garage(){
 //component in files --> lihat di w3school.com
 //class component (stateful) --> lihat di w3school.com
 
-//props
+//------------------------------props
 /*
 function Car(props){
     //return <h2>I am a {props.brand}</h2>
@@ -98,22 +100,174 @@ function Garage(){
 }
 */
 
-//events
+//------------------------------events
 //events ditulis dengan camelCase --> onClick, onChange
 //event handler ditulis dalam kurung --> onClick={shoot}
 
-function Football() {
-    const shoot = (a,b) => {
-        //alert(a);
-        alert(b.type);
+// function Football() {
+//     const shoot = (a,b) => {
+//         //alert(a);
+//         alert(b.type);
+//     }
+
+//     //passing parameter harus pake arrow function
+//     return (
+//         <button onClick={(event) => shoot("Goal!", event)} >Take The Shot</button>
+//     );
+//     //parameter event bakal berguna buat form
+// }
+//<Football />
+
+//------------------------------conditional
+//if-else
+
+// function MadeGoal() {
+//     return<h1>Goal!!!</h1>
+// }
+
+// function MissedGoal() {
+//     return <h1>Missed!!!</h1>
+// }
+
+// function Goal(props){
+//     const isGoal = props.isGoal;
+//     if (isGoal) {
+//         return <MadeGoal />
+//     }else {
+//         return <MissedGoal />
+//     }
+// }
+//<Goal isGoal={true} />
+
+//&& operator
+
+// function Garage(props) {
+//     const cars = props.cars;
+//     return (
+//         <>
+//             <h1>Garage</h1>
+//             {cars.length > 0 &&
+//                 <h2>You have {cars.length} cars in your garage</h2>
+//             }
+//         </>
+//     )
+// }
+// const cars = ["Ford", "BMW"];
+//<Garage cars={cars} />
+
+//ternary operator
+
+// function Goal(props){
+//     const isGoal = props.isGoal;
+//     return <div> {isGoal ? <MadeGoal /> : <MissedGoal />} </div>
+// }
+//<Goal isGoal = {true} />
+
+//------------------------------Lists
+// function Cars(props){
+//     return <li>I am a {props.brand}</li>
+// }
+
+// function Garage(){
+//     const cars = [
+//         {id: 1, brand: "Ford"},
+//         {id: 2, brand: "BMW"},
+//         {id: 3, brand: "Audi"},
+//     ];
+
+//     return (
+//         <div>
+//             <h1>Who lives in my garage?</h1>
+//             {cars.map(car => <Cars key={car.id} brand={car.brand} />)}
+//         </div>
+//     );
+// }
+//<Garage />
+
+//------------------------------Forms
+//handling forms
+
+// function MyForm(){
+//     const [name, setName] = useState("");
+
+//     return (
+//         <form>
+//             <label>Enter your name:
+//                 <input 
+//                     type='text'
+//                     value={name}
+//                     onChange={(e) => setName(e.target.value)}
+//                 />
+//             </label>
+//         </form>
+//     )
+// }
+
+//submiting forms
+
+// function MyForm(){
+//     const [name, setName] = useState("");
+
+//     const handleSubmit = (event) => {
+//         event.preventDefault();
+//         alert(`The name you entered was ${name}`);
+//     }
+
+//     return (
+//         <form onSubmit={handleSubmit}>
+//             <label>Enter your name:
+//                 <input 
+//                     type='text'
+//                     value={name}
+//                     onChange={(e) => setName(e.target.value)}
+//                 />
+//             </label>
+//             <input type='submit' />
+//         </form>
+//     );
+// }
+
+//multiple input fields
+
+function MyForm(){
+    const [inputs, setInputs] = useState({});
+
+    const handleChange = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+        setInputs(values => ({...values, [name]: value}))
     }
 
-    //passing parameter harus pake arrow function
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const inputString = JSON.stringify(inputs, null, 2);
+        alert(inputString);
+    }
+
     return (
-        <button onClick={(event) => shoot("Goal!", event)} >Take The Shot</button>
+        <form onSubmit={handleSubmit}>
+            <label>Enter your name:
+                <input 
+                    type='text'
+                    name='username'
+                    value={inputs.username || ""}
+                    onChange={handleChange}
+                />
+            </label>
+            <label>Enter your age:
+                <input 
+                    type='number'
+                    name='age'
+                    value={inputs.age || ""}
+                    onChange={handleChange}
+                />
+            </label>
+            <input type='submit' />
+        </form>
     );
-    //parameter event bakal berguna buat form
 }
+//<MyForm />
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Football />);
+root.render(<MyForm />);
+//fix error babel : npm install --save-dev @babel/plugin-proposal-private-property-in-object
