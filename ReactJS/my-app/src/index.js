@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { useState } from 'react'; //penting buat hook
+import './meltryllis.css';
 
 /*
 const myArray = ['apple', 'orange', 'banana'];
@@ -188,7 +189,8 @@ function Garage(){
 //handling forms
 
 // function MyForm(){
-//     const [name, setName] = useState("");
+//    const [name, setName] = useState("");
+    //name dijadikan empty string, setName jadi method buat ganti valuenya name
 
 //     return (
 //         <form>
@@ -228,19 +230,26 @@ function Garage(){
 // }
 
 //multiple input fields
-
+/*
 function MyForm(){
     const [inputs, setInputs] = useState({});
+    //inputs dijadikan object kosong
 
+    //handleChange untuk ganti value saat input diisi
     const handleChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
         setInputs(values => ({...values, [name]: value}))
+        //setInputs dimasukkan callback function, values = inputs karena saat method dipanggil isinya inputs masuk ke values
+        //di function terjadi pembuatan object baru dengan menggunakan { //isi object baru }
+        //{...values, [name]: value} -> untuk mengcopy semua isi dari state inputs
+        //, [name]: value -> untuk menambah property baru di dalam state inputs (object)
+        //,[name]: value tidak harus 1 tapi bisa ditambah koma koma lagi
     }
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const inputString = JSON.stringify(inputs, null, 2);
+        const inputString = JSON.stringify(inputs, null, 2); //supaya isi object bisa di print
         alert(inputString);
     }
 
@@ -266,8 +275,53 @@ function MyForm(){
         </form>
     );
 }
+
+*/
+
+//select
+/*
+function MyForm() {
+    const [myCar, setMyCar] = useState("BMW");
+
+    const handleChange = (event) => {
+        setMyCar(event.target.value);
+    }
+
+    return(
+        <form>
+            <select value={myCar} onChange={handleChange}>
+                <option>Ford</option>
+                <option>BMW</option>
+                <option>Porsche</option>
+            </select>
+        </form>
+    )
+}
 //<MyForm />
+*/
+
+//react css styling
+
+//inline styling <h1 style={{color: "red", backgroundColor: "blue"}}>Hello Style!</h1>
+//object styling
+const Header = () => {
+    const myStyle = {
+        color: "#f5f0f0",
+        backgroundColor: "#171f1f",
+        padding: "10px",
+        fontFamily: "Sans-Serif"
+    };
+    return (
+        <div>
+            <h1 style={myStyle}>Hello my negus</h1>
+            <span>im not in danger skyler, i am the danger</span>
+        </div>
+    )
+}
+//css stylesheet
+//harus pake import './meltryllis.css'; (import dari file baru custom)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<MyForm />);
+root.render(<Header />);
 //fix error babel : npm install --save-dev @babel/plugin-proposal-private-property-in-object
+//must be learned last : react memo (skip rendering)
