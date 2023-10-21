@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { useState } from 'react'; //penting buat hook
-import './meltryllis.css';
 
 /*
 const myArray = ['apple', 'orange', 'banana'];
@@ -301,9 +300,11 @@ function MyForm() {
 */
 
 //react css styling
+import './meltryllis.css';
 
 //inline styling <h1 style={{color: "red", backgroundColor: "blue"}}>Hello Style!</h1>
 //object styling
+/*
 const Header = () => {
     const myStyle = {
         color: "#f5f0f0",
@@ -318,10 +319,46 @@ const Header = () => {
         </div>
     )
 }
+*/
 //css stylesheet
 //harus pake import './meltryllis.css'; (import dari file baru custom)
 
+//multiple state hooks
+const Car = () =>{
+    // const [brand, setBrand] = useState("Ford");
+    // const [model, setModel] = useState("Mustang");
+    // const [year, setYear] = useState("1964")
+    // const [color, setColor] = useState("Blue")
+    //bisa juga pakai object
+    const [car, setCar] = useState({
+        brand: "Ford",
+        model: "Mustang",
+        year: "1964",
+        color: "Blue"
+    });
+
+    //update state
+    const updateColor = () => {
+        setCar(previousState => {
+            return {...previousState, color: "Red"}
+        })
+    }
+
+    return (
+        <div>
+            <h1>My {car.brand}</h1>
+            <p>
+                it is a {car.color} {car.model} from {car.year}
+            </p>
+            <button
+            type='button'
+            onClick={updateColor}
+            >Red</button>
+        </div>
+    )
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Header />);
+root.render(<Car />);
 //fix error babel : npm install --save-dev @babel/plugin-proposal-private-property-in-object
 //must be learned last : react memo (skip rendering)
