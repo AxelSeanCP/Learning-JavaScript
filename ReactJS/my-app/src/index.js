@@ -324,6 +324,7 @@ const Header = () => {
 //harus pake import './meltryllis.css'; (import dari file baru custom)
 
 //multiple state hooks
+/*
 const Car = () =>{
     // const [brand, setBrand] = useState("Ford");
     // const [model, setModel] = useState("Mustang");
@@ -357,8 +358,11 @@ const Car = () =>{
         </div>
     )
 }
+*/
+
+import Exer2 from "./exercise"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Car />);
+root.render(<Exer2 />);
 //fix error babel : npm install --save-dev @babel/plugin-proposal-private-property-in-object
 //must be learned last : react memo (skip rendering)
