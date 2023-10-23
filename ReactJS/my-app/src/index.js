@@ -360,9 +360,9 @@ const Car = () =>{
 }
 */
 
-import Exer2 from "./exercise"
+import Exer4 from "./exercise"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Exer2 />);
+root.render(<Exer4 />);
 //fix error babel : npm install --save-dev @babel/plugin-proposal-private-property-in-object
 //must be learned last : react memo (skip rendering)
