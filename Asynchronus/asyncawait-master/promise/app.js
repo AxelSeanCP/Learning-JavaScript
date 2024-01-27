@@ -33,6 +33,7 @@ async function requestHandler() {
 	}
 }
 
+// contoh callback request
 requestCallback(
 	'movie.com',
 	res => {
@@ -43,32 +44,42 @@ requestCallback(
 	}
 );
 
+// contoh promise request
 requestPromise('movie.com')
 	.then(res => {
 		console.log(res);
+		requestPromise('movie.com')
+			.then(res => {
+				console.log(res);
+			})
+			.catch(err => {
+				console.log(err);
+			})
 	})
 	.catch(err => {
 		console.log(err);
 	});
 
-// requestPromise('movie.com')
-// 	.then((result) => {
-// 		console.log('page 1');
-// 		console.log(result);
-// 		return requestPromise('movie.com');
-// 	})
-// 	.then(() => {
-// 		console.log('page 2');
-// 		return requestPromise('movie.com');
-// 	})
-// 	.then(() => {
-// 		console.log('page 3');
-// 		return requestPromise('movie.com');
-// 	})
-// 	.catch((err) => {
-// 		console.log(err);
-// 	});
+// cara pakai promise yang benar
+requestPromise('movie.com')
+	.then(result => {
+		console.log('page 1');
+		console.log(result);
+		return requestPromise('movie.com')
+	})
+	.then(() => {
+		console.log('page 2');
+		return requestPromise('movie.com');
+	})
+	.then(result => {
+		console.log('page 3');
+		return requestPromise('movie.com');
+	})
+	.catch(err => {
+		console.log(err);
+	});
 
+// callback hell promise & normal request
 // requestPromise('movie.com')
 // 	.then((response) => {
 // 		console.log('success', response);
