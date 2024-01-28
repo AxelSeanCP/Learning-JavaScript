@@ -24,12 +24,12 @@ const requestPromise = (url) => {
 	});
 };
 
-async function requestHandler() {
+async function requestHandler(){
 	try {
 		let result = await requestPromise('movie.com');
 		console.log(result);
 	} catch (error) {
-		console.log('Pesan Error', error);
+		console.log('Error', error);
 	}
 }
 
@@ -161,3 +161,10 @@ requestPromise('movie.com')
 // 		console.log('error', error);
 // 	}
 // );
+
+// cara membuat promise
+new Promise((resolve, reject) => {
+	resolve(() => {}); //kondisi kalau proses berhasil
+	reject(() => {}); //kondisi kalau proses gagal
+});
+// lanjut di backgroundchanger
