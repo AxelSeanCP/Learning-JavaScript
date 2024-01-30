@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "2178f599-39c6-4546-a55f-458f79f32aa0",
+		"name": "codepolitan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31486336"
+	},
+	"item": [
+		{
+			"name": "response type with headers data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "text/html",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "text/plain",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://icanhazdadjoke.com/",
+					"protocol": "https",
+					"host": [
+						"icanhazdadjoke",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
