@@ -42,6 +42,53 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "get people in swapi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/people/1/",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"people",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get random joke",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://icanhazdadjoke.com/",
+					"protocol": "https",
+					"host": [
+						"icanhazdadjoke",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

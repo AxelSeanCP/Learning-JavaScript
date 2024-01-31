@@ -1,0 +1,3 @@
+https://swapi.dev/documentation
+https://icanhazdadjoke.com/api
+https://www.tvmaze.com/api
