@@ -1,2 +1,8 @@
 link github codepolitan
 https://github.com/idstck/vue-basic
+
+reactive data: data yang dapat diubah berdasarkan value yang diterima
+
+loop:
+- pakai v-for="x in y", x = nama variabel dan y = nama array/data
+- setiap attribute dikasi (x.) di awal

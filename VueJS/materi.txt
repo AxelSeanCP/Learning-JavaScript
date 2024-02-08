@@ -1,0 +1,11 @@
+pertemuan 1 - 7/2/24
+- cara install vuejs pakai cdn (pakai yang versi 2) 
+- include juga cdn bootstrap dan jquery
+- cara pakai vuejs di script
+
+pertemuan 2 - 8/2/24
+- apa itu reactive data
+- cara binding data ke html (v-bind optional, asal ada titik dua)
+- v-bind bisa di semua attribute html
+- tambah beberapa class di div#app
+- cara loop menggunakan vue js (v-for)

@@ -1,3 +1,0 @@
-- cara install vuejs pakai cdn (pakai yang versi 2) 
-- include juga cdn bootstrap dan jquery
-- cara pakai vuejs di script
