@@ -17,31 +17,18 @@
 //     }
 // });
 
-const dataProduct = { 
-    maximum: 20,
-    products: [
-        {
-            "name": "Meltryllis Figure",
-            "description": "This is an action figure of a popular character named Meltryllis from Fate/Grand Order. Get yours only on Kyou Hobby Shop. Free 1 action figure for newcomers",
-            "price": 9.3,
-            "image": "https://cdn.kyou.id/items/159321-revive-pvc-figure-18-alter-ego-meltlilith.jpg"
-        },
-        {
-            "name": "Meltryllis Figure",
-            "description": "This is an action figure of a popular character named Meltryllis from Fate/Grand Order. Get yours only on Kyou Hobby Shop. Free 1 action figure for newcomers",
-            "price": 29,
-            "image": "https://cdn.kyou.id/items/159321-revive-pvc-figure-18-alter-ego-meltlilith.jpg"
-        },
-        {
-            "name": "Meltryllis Figure",
-            "description": "This is an action figure of a popular character named Meltryllis from Fate/Grand Order. Get yours only on Kyou Hobby Shop. Free 1 action figure for newcomers",
-            "price": 10.7,
-            "image": "https://cdn.kyou.id/items/159321-revive-pvc-figure-18-alter-ego-meltlilith.jpg"
-        }
-    ]
-}
 
 const app = new Vue({
     el: '#app',
-    data: dataProduct
+    data: {
+        maximum: 50,
+        products: null
+    },
+    mounted: function() {
+        fetch('https://hplussport.com/api/products/order/price')
+        .then(res => res.json())
+        .then(data => {
+            this.products = data;
+        });
+    }
 });

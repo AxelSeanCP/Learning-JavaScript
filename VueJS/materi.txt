@@ -13,3 +13,7 @@ pertemuan 2 - 8/2/24
 pertemuan 3 - 9/2/24
 - pengkondisian dalam vue (contoh: produk dibawah 20juta yang ditampilkan)
 - mengatasi user input dengan v-model menggunakan input range dan input number
+
+pertemuan 4 - 10/2/24
+- hapus dataProduct karena akan pakai data dari API
+- mengenal lifecycle hooks
