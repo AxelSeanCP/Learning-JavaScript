@@ -9,3 +9,7 @@ pertemuan 2 - 8/2/24
 - v-bind bisa di semua attribute html
 - tambah beberapa class di div#app
 - cara loop menggunakan vue js (v-for)
+
+pertemuan 3 - 9/2/24
+- pengkondisian dalam vue (contoh: produk dibawah 20juta yang ditampilkan)
+- mengatasi user input dengan v-model menggunakan input range dan input number

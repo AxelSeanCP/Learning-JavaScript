@@ -18,23 +18,24 @@
 // });
 
 const dataProduct = { 
+    maximum: 20,
     products: [
         {
             "name": "Meltryllis Figure",
             "description": "This is an action figure of a popular character named Meltryllis from Fate/Grand Order. Get yours only on Kyou Hobby Shop. Free 1 action figure for newcomers",
-            "price": "9.000.000",
+            "price": 9.3,
             "image": "https://cdn.kyou.id/items/159321-revive-pvc-figure-18-alter-ego-meltlilith.jpg"
         },
         {
             "name": "Meltryllis Figure",
             "description": "This is an action figure of a popular character named Meltryllis from Fate/Grand Order. Get yours only on Kyou Hobby Shop. Free 1 action figure for newcomers",
-            "price": "9.000.000",
+            "price": 29,
             "image": "https://cdn.kyou.id/items/159321-revive-pvc-figure-18-alter-ego-meltlilith.jpg"
         },
         {
             "name": "Meltryllis Figure",
             "description": "This is an action figure of a popular character named Meltryllis from Fate/Grand Order. Get yours only on Kyou Hobby Shop. Free 1 action figure for newcomers",
-            "price": "9.000.000",
+            "price": 10.7,
             "image": "https://cdn.kyou.id/items/159321-revive-pvc-figure-18-alter-ego-meltlilith.jpg"
         }
     ]
