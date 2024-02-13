@@ -9,25 +9,22 @@
 <body>
 
     <div class="container" id="app">
-        <div class="form-inline me-auto">
-            <label for="" class="fw-bold me-0">Max</label>
-            <input type="number" class="form-control w-25" v-model="maximum">
-            <input type="range" class="custom-range" min="0" max="200" v-model="maximum">
-        </div>
-        <div 
-            class="row d-flex mb-3 align-items-center" 
-            v-for="item in products" 
-            v-if="item.price <= Number(maximum)"
-        >
-            <div class="col-sm-4">
-                <img v-bind:src="item.image" :alt="item.name" class="img-fluid d-block">
-            </div>
-            <div class="col">
-                <h3 class="text-info">{{ item.name }}</h3>
-                <p class="mb-0">{{ item.description }}</p>
-                <div class="h5 float-end">Rp{{ item.price }}</div>
-            </div>
-        </div>
+        <p>
+            <strong>Bound:</strong><br>
+            <span>{{name}}</span>
+        </p>
+        <p>
+            <strong>Parsed: </strong><br>
+            <span v-html="name"></span>
+        </p>
+        <p>
+            <strong>Unchangedable: </strong><br>
+            <span v-once>{{ name }}</span>
+        </p>
+        <p>
+            <strong>Text </strong><br>
+            <textarea class="form-control" rows="3" v-model="name"></textarea>
+        </p>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

@@ -1,19 +1,28 @@
-pertemuan 1 - 7/2/24
-- cara install vuejs pakai cdn (pakai yang versi 2) 
-- include juga cdn bootstrap dan jquery
-- cara pakai vuejs di script
+Chapter 1 
+    pertemuan 1 - 7/2/24
+    - cara install vuejs pakai cdn (pakai yang versi 2) 
+    - include juga cdn bootstrap dan jquery
+    - cara pakai vuejs di script
 
-pertemuan 2 - 8/2/24
-- apa itu reactive data
-- cara binding data ke html (v-bind optional, asal ada titik dua)
-- v-bind bisa di semua attribute html
-- tambah beberapa class di div#app
-- cara loop menggunakan vue js (v-for)
+    pertemuan 2 - 8/2/24
+    - apa itu reactive data
+    - cara binding data ke html (v-bind optional, asal ada titik dua)
+    - v-bind bisa di semua attribute html
+    - tambah beberapa class di div#app
+    - cara loop menggunakan vue js (v-for)
 
-pertemuan 3 - 9/2/24
-- pengkondisian dalam vue (contoh: produk dibawah 20juta yang ditampilkan)
-- mengatasi user input dengan v-model menggunakan input range dan input number
+    pertemuan 3 - 9/2/24
+    - pengkondisian dalam vue (contoh: produk dibawah 20juta yang ditampilkan)
+    - mengatasi user input dengan v-model menggunakan input range dan input number
 
-pertemuan 4 - 10/2/24
-- hapus dataProduct karena akan pakai data dari API
-- mengenal lifecycle hooks
+    pertemuan 4 - 10/2/24
+    - hapus dataProduct karena akan pakai data dari API
+    - mengenal lifecycle hooks
+
+    pertemuan 5 - 13/2/24
+    - mengenal directive event dengan v-on
+    - cara membuat custom function (methods) di vue
+
+Chapter 2
+    pertemuan 1 - 13/2/24
+    - mengenal interpolation template, cara bind data
